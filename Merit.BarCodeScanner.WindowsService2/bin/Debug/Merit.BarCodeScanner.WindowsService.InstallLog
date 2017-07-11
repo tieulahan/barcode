@@ -1,0 +1,13 @@
+﻿Installing assembly 'D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.WindowsService2\bin\Debug\Merit.BarCodeScanner.WindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.WindowsService2\bin\Debug\Merit.BarCodeScanner.WindowsService.InstallLog
+   assemblypath = D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.WindowsService2\bin\Debug\Merit.BarCodeScanner.WindowsService.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.WindowsService2\bin\Debug\Merit.BarCodeScanner.WindowsService.exe assembly.
+Committing assembly 'D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.WindowsService2\bin\Debug\Merit.BarCodeScanner.WindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.WindowsService2\bin\Debug\Merit.BarCodeScanner.WindowsService.InstallLog
+   assemblypath = D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.WindowsService2\bin\Debug\Merit.BarCodeScanner.WindowsService.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.WindowsService2\bin\Debug\Merit.BarCodeScanner.WindowsService.exe assembly.
+Remove InstallState file because there are no installers.

@@ -1,0 +1,8 @@
+D:\FormTest\Merit.BarCodeScanner.WindowService\bin\Debug\Merit.BarCodeScanner.WindowService.exe.config
+D:\FormTest\Merit.BarCodeScanner.WindowService\bin\Debug\Merit.BarCodeScanner.WindowService.exe
+D:\FormTest\Merit.BarCodeScanner.WindowService\bin\Debug\Merit.BarCodeScanner.WindowService.pdb
+D:\FormTest\Merit.BarCodeScanner.WindowService\obj\Debug\Merit.BarCodeScanner.WindowService.csprojResolveAssemblyReference.cache
+D:\FormTest\Merit.BarCodeScanner.WindowService\obj\Debug\Merit.BarCodeScanner.WindowService.BarCodeScanner.resources
+D:\FormTest\Merit.BarCodeScanner.WindowService\obj\Debug\Merit.BarCodeScanner.WindowService.csproj.GenerateResource.Cache
+D:\FormTest\Merit.BarCodeScanner.WindowService\obj\Debug\Merit.BarCodeScanner.WindowService.exe
+D:\FormTest\Merit.BarCodeScanner.WindowService\obj\Debug\Merit.BarCodeScanner.WindowService.pdb
