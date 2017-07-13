@@ -118,6 +118,10 @@
       <Project>{b0cf645d-20f5-463a-9e44-e85b458c8947}</Project>
       <Name>Merit.BarCodeScanner.Helpers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Merit.BarCodeScanner.Logging\Merit.BarCodeScanner.Logging.csproj">
+      <Project>{a67cb43b-8518-4661-b5ee-02393fcb3818}</Project>
+      <Name>Merit.BarCodeScanner.Logging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Merit.BarCodeScanner.Models\Merit.BarCodeScanner.Models.csproj">
       <Project>{2598c431-087b-4296-b82e-74856239791f}</Project>
       <Name>Merit.BarCodeScanner.Models</Name>

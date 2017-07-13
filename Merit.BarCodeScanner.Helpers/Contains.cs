@@ -32,6 +32,7 @@
             BLANK,
             ENDBLOCK,
             UNDEFINED,
+            EXCEPTION
         }
     }
 }

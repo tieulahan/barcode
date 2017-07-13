@@ -34,3 +34,15 @@ D:\Code2017\FormTest\Merit.BarCodeScanner.Data\bin\Debug\EntityFramework.SqlServ
 D:\Code2017\FormTest\Merit.BarCodeScanner.Data\obj\Debug\Merit.BarCodeScanner.Data.csprojResolveAssemblyReference.cache
 D:\Code2017\FormTest\Merit.BarCodeScanner.Data\obj\Debug\Merit.BarCodeScanner.Data.dll
 D:\Code2017\FormTest\Merit.BarCodeScanner.Data\obj\Debug\Merit.BarCodeScanner.Data.pdb
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\Merit.BarCodeScanner.Data.dll.config
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\Merit.BarCodeScanner.Data.dll
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\Merit.BarCodeScanner.Data.pdb
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\EntityFramework.dll
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\Merit.BarCodeScanner.Models.dll
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\Merit.BarCodeScanner.Models.pdb
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\EntityFramework.xml
+D:\BarCode\Merit.BarCodeScanner.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\BarCode\Merit.BarCodeScanner.Data\obj\Debug\Merit.BarCodeScanner.Data.csprojResolveAssemblyReference.cache
+D:\BarCode\Merit.BarCodeScanner.Data\obj\Debug\Merit.BarCodeScanner.Data.dll
+D:\BarCode\Merit.BarCodeScanner.Data\obj\Debug\Merit.BarCodeScanner.Data.pdb

@@ -50,6 +50,7 @@ namespace Merit.BarCodeScanner.WindowsService2
                 timer = new Timer();
                 this.timer.Interval = interval; //10000 ~ 1s
                 this.timer.Elapsed += new System.Timers.ElapsedEventHandler(WorkProcess);
+                timer.Start();
             }
 
             barCodeTimer.Enabled = false;

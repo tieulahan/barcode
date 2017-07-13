@@ -31,3 +31,14 @@ D:\Code2017\FormTest\Merit.BarCodeScanner.Helpers\bin\Debug\log4net.xml
 D:\Code2017\FormTest\Merit.BarCodeScanner.Helpers\obj\Debug\Merit.BarCodeScanner.Helpers.csprojResolveAssemblyReference.cache
 D:\Code2017\FormTest\Merit.BarCodeScanner.Helpers\obj\Debug\Merit.BarCodeScanner.Helpers.dll
 D:\Code2017\FormTest\Merit.BarCodeScanner.Helpers\obj\Debug\Merit.BarCodeScanner.Helpers.pdb
+D:\BarCode\Merit.BarCodeScanner.Helpers\bin\Debug\Merit.BarCodeScanner.Helpers.dll
+D:\BarCode\Merit.BarCodeScanner.Helpers\bin\Debug\Merit.BarCodeScanner.Helpers.pdb
+D:\BarCode\Merit.BarCodeScanner.Helpers\bin\Debug\Merit.BarCodeScanner.Logging.dll
+D:\BarCode\Merit.BarCodeScanner.Helpers\bin\Debug\Merit.BarCodeScanner.Models.dll
+D:\BarCode\Merit.BarCodeScanner.Helpers\bin\Debug\log4net.dll
+D:\BarCode\Merit.BarCodeScanner.Helpers\bin\Debug\Merit.BarCodeScanner.Logging.pdb
+D:\BarCode\Merit.BarCodeScanner.Helpers\bin\Debug\Merit.BarCodeScanner.Models.pdb
+D:\BarCode\Merit.BarCodeScanner.Helpers\bin\Debug\log4net.xml
+D:\BarCode\Merit.BarCodeScanner.Helpers\obj\Debug\Merit.BarCodeScanner.Helpers.csprojResolveAssemblyReference.cache
+D:\BarCode\Merit.BarCodeScanner.Helpers\obj\Debug\Merit.BarCodeScanner.Helpers.dll
+D:\BarCode\Merit.BarCodeScanner.Helpers\obj\Debug\Merit.BarCodeScanner.Helpers.pdb

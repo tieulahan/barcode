@@ -79,6 +79,10 @@ namespace Merit.BarCodeScanner.Helpers
                 {
                     dailyValues.RowType = Contains.RowType.ENDBLOCK.ToString();
                 }
+                else
+                {
+                    dailyValues.RowType = Contains.RowType.EXCEPTION.ToString();
+                }
 
                 if (string.IsNullOrEmpty(csvLine))
                 {

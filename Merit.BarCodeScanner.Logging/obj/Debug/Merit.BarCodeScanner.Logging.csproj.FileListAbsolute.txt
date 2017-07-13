@@ -11,3 +11,10 @@ D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.Logging\bin\Debug
 D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.Logging\bin\Debug\log4net.xml
 D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.Logging\obj\Debug\Merit.BarCodeScanner.Logging.dll
 D:\Code2017\Merit.BarCodeScanner\FormTest\Merit.BarCodeScanner.Logging\obj\Debug\Merit.BarCodeScanner.Logging.pdb
+D:\BarCode\Merit.BarCodeScanner.Logging\bin\Debug\Merit.BarCodeScanner.Logging.dll
+D:\BarCode\Merit.BarCodeScanner.Logging\bin\Debug\Merit.BarCodeScanner.Logging.pdb
+D:\BarCode\Merit.BarCodeScanner.Logging\bin\Debug\log4net.dll
+D:\BarCode\Merit.BarCodeScanner.Logging\bin\Debug\log4net.xml
+D:\BarCode\Merit.BarCodeScanner.Logging\obj\Debug\Merit.BarCodeScanner.Logging.csprojResolveAssemblyReference.cache
+D:\BarCode\Merit.BarCodeScanner.Logging\obj\Debug\Merit.BarCodeScanner.Logging.dll
+D:\BarCode\Merit.BarCodeScanner.Logging\obj\Debug\Merit.BarCodeScanner.Logging.pdb

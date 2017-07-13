@@ -43,53 +43,63 @@ namespace Merit.BarCodeScanner.Services
                 var nextIndex = index + 1;
 
                 //Remove blank row
-                if (item.RowType.Equals(Contains.RowType.BLANK.ToString()))
-                {
-                    try
-                    {
-                        dailyScanValues.Remove(item);
-                        var nextItem = dailyScanValues[nextIndex];
+                //if (item.RowType.Equals(Contains.RowType.BLANK.ToString()))
+                //{
+                //    try
+                //    {
+                //        dailyScanValues.Remove(item);
+                //        var nextItem = dailyScanValues[nextIndex];
 
-                        if (nextItem.RowType.Equals(Contains.RowType.BLANK.ToString()))
-                        {
-                            blankRow++;
-                        }
+                //        if (nextItem.RowType.Equals(Contains.RowType.BLANK.ToString()))
+                //        {
+                //            blankRow++;
+                //        }
 
-                        if (blankRow <= 9)
-                        {
-                            _logService.LogError("Have multi blank row " + item.BarCode + ", Line: " + row);
-                            return new ResultRespose
-                            {
-                                Status = false,
-                                Message = "Have multi blank row " + item.BarCode + ", Line: " + row
-                            };
-                        }
-                    }
-                    catch (Exception) { }
-                }
+                //        if (blankRow <= 9)
+                //        {
+                //            _logService.LogError("Have multi blank row " + item.BarCode + ", Line: " + row);
+                //            return new ResultRespose
+                //            {
+                //                Status = false,
+                //                Message = "Have multi blank row " + item.BarCode + ", Line: " + row
+                //            };
+                //        }
+                //    }
+                //    catch (Exception) { }
+                //}
 
                 //Special character row
                 if (item.RowType.Equals(Contains.RowType.ENDBLOCK.ToString()))
                 {
                     try
                     {
-                        var prevItem = dailyScanValues[prevIndex];
+                        var nextItem = dailyScanValues[nextIndex];
 
-                        if (prevItem.RowType.Equals(Contains.RowType.ENDBLOCK.ToString()))
+                        if (nextItem.RowType.Equals(Contains.RowType.ENDBLOCK.ToString()) || nextItem.RowType.Equals(Contains.RowType.EXCEPTION.ToString()))
                         {
                             endBlock++;
 
                             if (endBlock > 1)
                             {
 
-                                _logService.LogError("Special character row " + item.BarCode + ", Line: " + row);
+                                _logService.LogError("Special character row " + nextItem.BarCode + ", Line: " + row);
                                 return new ResultRespose
                                 {
                                     Status = false,
-                                    Message = "Special character row " + item.BarCode + ", Line: " + row
+                                    Message = "Special character row " + nextItem.BarCode + ", Line: " + row
                                 };
                             }
                         }
+                        //else if (nextItem.RowType.Equals(Contains.RowType.DESTINATION.ToString()))
+                        //{
+                        //    dailyScanValues.Remove(nextItem);
+                        //    _logService.LogError("Redundant Destination barcode " + nextItem.BarCode + ", Line: " + row);
+                        //    return new ResultRespose
+                        //    {
+                        //        Status = false,
+                        //        Message = "Redundant Destination barcode " + nextItem.BarCode + ", Line: " + row
+                        //    };
+                        //}
                     }
                     catch (Exception) { }
                 }
@@ -124,6 +134,12 @@ namespace Merit.BarCodeScanner.Services
                             BlockEndTime = empWorkings.Last().WorkTime,
                             BlockStartTime = FileHelper.CvStringToDate(item.DateTime)
                         };
+
+                        if (nextItem.RowType.Equals(Contains.RowType.DESTINATION.ToString())
+                            && nextItem.BarCode.Equals(item.BarCode))
+                        {
+                            _logService.LogWarn("Redundant Destination barcode " + item.BarCode + ", Line: " + row);
+                        }
 
                         if (nextItem.RowType.Equals(Contains.RowType.EMPLOYEE.ToString()))
                         {
@@ -218,6 +234,12 @@ namespace Merit.BarCodeScanner.Services
                             dailyScanValues.Remove(item);
                             _logService.LogWarn("Redundant Employee barcode " + item.BarCode + ", Line: " + row);
                         }
+
+                        //if (nextItem.RowType.Equals(Contains.RowType.DESTINATION.ToString()))
+                        //{
+                        //    dailyScanValues.Remove(nextItem);
+                        //    _logService.LogWarn("Redundant Employee barcode " + nextItem.BarCode + ", Line: " + row);
+                        //}
                     }
                     catch (Exception) { }
 
@@ -228,6 +250,7 @@ namespace Merit.BarCodeScanner.Services
                         //Employee barcode is displayed at the end of Scanner dataset
                         if (nextItem.RowType.Equals(Contains.RowType.ENDBLOCK.ToString()))
                         {
+                            dailyScanValues.Remove(item);
                             _logService.LogWarn("Redundant Employee barcode " + item.BarCode + ", Line: " + row);
                         }
                     }
@@ -283,11 +306,11 @@ namespace Merit.BarCodeScanner.Services
                             WorkTime = FileHelper.CvStringToDate(item.DateTime).Value.AddSeconds(-1)
                         };
                         empWorkings.Add(empl);
-                        _logService.LogWarn("Lack Employee barcode befor Pallet" + prevItem.BarCode + ", Line: " + row);
+                        _logService.LogWarn("Lack Employee barcode befor Pallet " + item.BarCode + ", Line: " + row);
                     }
 
                     //Remove duplicate pallet
-                    if (palletDetails.Any())
+                    if (palletDetails.Any(p=>p.PalletId  == item.BarCode))
                     {
                         var listDuplicate =
                             palletDetails.FirstOrDefault(x => x.PalletId == item.BarCode && x.Day == item.Date);
@@ -328,16 +351,16 @@ namespace Merit.BarCodeScanner.Services
             //Insert to DB
             using (var dbContext = new barCodeDbContext())
             {
-                foreach (var emp in empWorkings)
-                {
-                    var getData = dbContext.EmpWorkings.FirstOrDefault(x => x.EmployeeId == emp.EmployeeId
-                    && x.Day == emp.Day);
+                //foreach (var emp in empWorkings)
+                //{
+                //    var getData = dbContext.EmpWorkings.FirstOrDefault(x => x.EmployeeId == emp.EmployeeId
+                //    && x.Day == emp.Day);
 
-                    if (getData == null)
-                    {
-                        dbContext.EmpWorkings.AddOrUpdate(emp);
-                    }
-                }
+                //    if (getData == null)
+                //    {
+                //        dbContext.EmpWorkings.AddOrUpdate(emp);
+                //    }
+                //}
 
                 //foreach (var item in palletDetails)
                 //{
